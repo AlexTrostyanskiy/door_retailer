@@ -1,6 +1,6 @@
 export default {
   name: "category",
-  title: "Category",
+  title: "Категория",
   type: "document",
   fields: [
     {
@@ -19,18 +19,14 @@ export default {
       validation: Rule => Rule.required()
     },
     {
-      name: "color",
-      title: "Color",
-      type: "string",
-      description: "Color of the category",
-      options: {
-        list: [
-          { title: "Green", value: "green" },
-          { title: "Blue", value: "blue" },
-          { title: "Purple", value: "purple" },
-          { title: "Orange", value: "orange" }
-        ]
-      }
+      title: 'Подкатегория',
+      name: 'subcategory',
+      type: 'reference',
+      to: [
+        {
+          type: 'category'
+        }
+      ]
     },
     {
       name: "description",

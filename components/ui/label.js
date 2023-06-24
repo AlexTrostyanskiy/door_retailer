@@ -33,7 +33,7 @@ export default function Label(props) {
       className={cx(
         "inline-block text-xs font-medium tracking-wider uppercase ",
         !margin && " mt-5",
-        color[props.color] || color[pink]
+        color[props.color] || color["pink"]
       )}>
       {props.children}
     </span>
