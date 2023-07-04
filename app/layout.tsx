@@ -4,12 +4,12 @@ import { cx } from "@/utils/all";
 import { Inter, Lora } from "next/font/google";
 
 const inter = Inter({
-  subsets: ["latin"],
+  subsets: ["latin", "cyrillic"],
   variable: "--font-inter"
 });
 
 const lora = Lora({
-  subsets: ["latin"],
+  subsets: ["latin", "cyrillic"],
   variable: "--font-lora"
 });
 
