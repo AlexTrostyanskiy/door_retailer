@@ -7,7 +7,7 @@ export default function Navbar(props) {
     return (
         <div className="bg-white">
             <div className="container mx-auto">
-                <nav className="flex flex-wrap justify-between py-4 gap-4">
+                <nav className="flex flex-wrap justify-between py-4 gap-8">
                     <Link className="w-28 dark:hidden" href="/">
                         <Image
                             {...urlForImage(props.logo)}
@@ -16,11 +16,11 @@ export default function Navbar(props) {
                             sizes="(max-width: 640px) 100vw, 200px"
                         />
                     </Link>
-                    <div className="flex flex-row items-center mr-auto">
-                        <Link className="text-sm px-4 font-medium text-gray-600 transition-all hover:text-amber-500 dark:text-gray-400" href="/">
+                    <div className="flex flex-row items-stretch gap-4 mr-auto">
+                        <Link className="flex items-center text-sm font-medium text-gray-600 transition-all hover:text-amber-500 dark:text-gray-400" href="/">
                             Каталог
                         </Link>
-                        <Link className="text-sm px-4 font-medium text-gray-600 transition-all hover:text-amber-500 dark:text-gray-400" href="/">
+                        <Link className="flex items-center text-sm font-medium text-gray-600 transition-all hover:text-amber-500 dark:text-gray-400" href="/">
                             Акции
                         </Link>
                     </div>
