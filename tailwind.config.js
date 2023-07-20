@@ -25,6 +25,9 @@ module.exports = {
         "2/3": "2 / 3",
         "9/16": "9 / 16"
       }
+    },
+    container: {
+      center: true
     }
   },
   variants: {
