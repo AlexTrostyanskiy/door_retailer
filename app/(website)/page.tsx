@@ -1,5 +1,6 @@
 import { MainBlock } from './main-block';
 import { ServicesBlock } from './services-block';
+import { SliderBlock } from './slider-block'
 
 import { getAllPosts } from '@/lib/sanity/client';
 
@@ -8,6 +9,7 @@ export function HomePage({ posts }) {
         <>
             <MainBlock />
             <ServicesBlock className="bg-gray-200 py-24"/>
+            <SliderBlock />
         </>
     );
 }
