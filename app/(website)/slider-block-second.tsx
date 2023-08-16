@@ -1,5 +1,5 @@
 import { Block } from './block';
-import { Button } from './button';
+import { Button } from '../../components/button';
 export function SliderBlockSecond() {
     return (
         <Block heading="Входные Двери" className="bg-neutral-300">

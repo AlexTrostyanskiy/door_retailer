@@ -1,29 +1,38 @@
 import { Block } from './block';
-import { Button } from './button';
+import { DoorThumbnail } from '../../components/door-thumbnail';
+
+interface Door {
+    title: string;
+    price: number;
+    imageSrc: string;
+}
 
 export function SliderBlockFirst() {
+    const doors = getDoors();
     return (
         <Block heading="Межкомнатные Двери">
             <div className="flex justify-center gap-12 p-12">
-                <div className="flex flex-col items-center shadow-xl rounded-xl p-8">
-                    <h2 className="font-semibold mb-2">Эмалекс</h2>
-                    <img className="shadow-xl" src="/emalex.webp" alt="" />
-                    <h5 className="mt-2">250 р.</h5>
-                    <Button>Рассчитать</Button>
-                </div>
-                <div className="flex flex-col items-center shadow-xl rounded-xl p-8">
-                    <h2 className="font-semibold mb-2">K6</h2>
-                    <img className="shadow-xl" src="k6.webp" alt="" />
-                    <h5 className="mt-2">265 р.</h5>
-                    <Button>Рассчитать</Button>
-                </div>
-                <div className="flex flex-col items-center shadow-xl rounded-xl p-8">
-                    <h2 className="font-semibold mb-2">Урбан</h2>
-                    <img className="shadow-xl" src="urban.webp" alt="" />
-                    <h5 className="mt-2">190 р.</h5>
-                    <Button>Рассчитать</Button>
-                </div>
+                {doors.map((door) => <DoorThumbnail price={door.price} title={door.title} imageSrc={door.imageSrc}/>)}
             </div>
         </Block>
     );
+}
+
+function getDoors(): Door[] {
+    const emalex = {
+        title: "Эмалекс",
+        price: 250,
+        imageSrc: "/emalex.webp"
+    };
+    const k6 = {
+        title: "K6",
+        price: 265,
+        imageSrc: "k6.webp"
+    };
+    const urban = {
+        title: "Урбан",
+        price: 190,
+        imageSrc: "urban.webp"
+    };
+    return [emalex, k6, urban];
 }
