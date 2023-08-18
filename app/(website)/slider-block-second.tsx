@@ -10,21 +10,26 @@ export function SliderBlockSecond() {
                     <h5 className="">190 р.</h5>
                     <Button>Рассчитать</Button>
                 </div>
-                <div className="flex flex-col items-center ">
-                    <img className="rounded-xl" src="/emalex.webp" alt="" />
-                    <h2 className="">Эмалекс</h2>
-                    <h5 className="">250 р.</h5>
-                    <Button>Рассчитать</Button>
+
+                <div className="flex gap-6 bg-white rounded-xl p-4 h-80">
+                        <img className="rounded-xl" src="/emalex.webp" alt="" />
+                    <div className='flex flex-col'>
+                        <h2>Категория - Эмаль</h2>
+                        <h5>Что это такое? Дверь состоит из чего-то, покрывается какой-то супер эмалью и тд и тп</h5>
+                        <Button>Перейти</Button>
+                    </div>
+                    
                 </div>
+
                 <div className="flex flex-col">
                     <img className="rounded-xl" src="k6.webp" alt="" />
                     <div className="border-b-2">
-                    <h2 >K6</h2>
+                        <h2>K6</h2>
                     </div>
                     <h5 className="">265 р.</h5>
                     <Button>Рассчитать</Button>
                 </div>
-                </div>
-                </Block>
+            </div>
+        </Block>
     );
 }
