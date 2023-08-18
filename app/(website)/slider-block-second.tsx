@@ -11,9 +11,9 @@ export function SliderBlockSecond() {
                     <Button>Рассчитать</Button>
                 </div>
 
-                <div className="flex gap-6 bg-white rounded-xl p-4 h-80">
+                <div className="flex gap-6 bg-white rounded-xl p-4 h-80 w-80">
                         <img className="rounded-xl" src="/emalex.webp" alt="" />
-                    <div className='flex flex-col'>
+                    <div className='flex flex-col justify-center items-center'>
                         <h2>Категория - Эмаль</h2>
                         <h5>Что это такое? Дверь состоит из чего-то, покрывается какой-то супер эмалью и тд и тп</h5>
                         <Button>Перейти</Button>
