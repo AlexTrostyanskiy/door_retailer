@@ -9,7 +9,7 @@ export function HomePage({ posts }) {
     return (
         <>
             <MainBlock />
-            <ServicesBlock className="bg-gray-200 py-24" />
+           {/* <ServicesBlock className="bg-gray-200 py-24" /> */}
             <SliderBlockFirst />
             <SliderBlockSecond />
         </>
