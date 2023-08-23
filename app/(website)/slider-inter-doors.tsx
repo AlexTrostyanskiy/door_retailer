@@ -7,7 +7,7 @@ interface Door {
     imageSrc: string;
 }
 
-export function SliderBlockFirst() {
+export function SliderInterDoors() {
     const doors = getDoors();
     return (
         <Block heading="Межкомнатные Двери">
