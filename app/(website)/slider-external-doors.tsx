@@ -5,7 +5,7 @@ import urban from '../../public/urban.webp';
 import { Block } from './block';
 import { Button } from '../../components/button';
 
-export function SliderOutDoors() {
+export function SliderExternalDoors() {
     return (
         <Block heading="Входные Двери" className="bg-neutral-300">
             <div className="flex justify-center gap-12 ml-8 mr-8 mb-8 p-12">
