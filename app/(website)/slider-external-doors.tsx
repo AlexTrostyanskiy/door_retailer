@@ -21,6 +21,17 @@ export function SliderExternalDoors() {
                     <Button className="place-self-end mt-auto">Перейти</Button>
                 </div>
             </div>
+            <div className="grid grid-cols-2 bg-white rounded-xl shadow-xl w-[40rem]">
+                <div className="place-self-center p-10">
+                    <Image src={urban} alt="Urban" className="object-contain"></Image>
+                </div>
+                
+                <div className='border-l border-black border-dashed flex flex-col justify-center items-center p-4'>
+                    <h2 className="mt-auto">Категория - Экошпон</h2>
+                    <p> Что это такое? Чуть другой текст. Дверь состоит из чего-то, покрывается какой-то супер пленкой и тд и тп Что это такое? Чуть другой текст. Дверь состоит из чего-то, покрывается какой-то супер пленкой и тд и тп Что это такое? Чуть другой текст. Дверь состоит из чего-то, покрывается какой-то супер пленкой и тд и тп Что это такое? Чуть другой текст. Дверь состоит из чего-то, покрывается какой-то супер пленкой и тд и тп Что это такое? Чуть другой текст. Дверь состоит из чего-то, покрывается какой-то супер пленкой и тд и</p>
+                    <Button className="place-self-end mt-auto">Перейти</Button>
+                </div>
+            </div>
 {/* 
                 <div className="flex gap-6 bg-white rounded-xl p-4 shadow-xl">
                         <img className='shadow-xl' src="/emalex.webp" alt="" />
