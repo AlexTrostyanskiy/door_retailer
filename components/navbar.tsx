@@ -17,11 +17,14 @@ export default function Navbar(props) {
                         />
                     </Link>
                     <div className="flex flex-row items-stretch gap-4 mr-auto">
-                        <Link className="flex items-center text-sm font-medium text-gray-600 transition-all hover:text-amber-500 dark:text-gray-400" href="/">
+                        <Link className="flex items-center text-sm font-medium text-gray-600 transition-all hover:text-amber-500 dark:text-gray-400" href="/catalog">
                             Каталог
                         </Link>
                         <Link className="flex items-center text-sm font-medium text-gray-600 transition-all hover:text-amber-500 dark:text-gray-400" href="/">
                             Акции
+                        </Link>
+                        <Link className="flex items-center text-sm font-medium text-gray-600 transition-all hover:text-amber-500 dark:text-gray-400" href="/about">
+                            О нас
                         </Link>
                     </div>
 

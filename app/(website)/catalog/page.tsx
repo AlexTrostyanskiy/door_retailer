@@ -5,9 +5,7 @@ export default async function AboutPage() {
   const settings = await getSettings();
   return <div>
 <p>
-  Тут текст о нас
+  Каталог и блок фильтров слева
 </p>
   </div>;
 }
-
-// export const revalidate = 60;
