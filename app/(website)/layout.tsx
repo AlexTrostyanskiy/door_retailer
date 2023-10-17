@@ -49,13 +49,13 @@ export async function generateMetadata({ params }) {
 export default async function Layout({ children, params }) {
   const settings = await getSettings();
   return (
-    <>
-      <Navbar {...settings} />
+    <div className="flex flex-col max-h-screen">
+      <Navbar className="grow-0 " {...settings} />
 
-      <div>{children}</div>
+      {children}
 
-      <Footer {...settings} />
-    </>
+      <Footer className="grow-0" {...settings} />
+    </div>
   );
 }
 // enable revalidate for all pages in this layout

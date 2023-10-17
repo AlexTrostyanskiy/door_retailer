@@ -1,11 +1,18 @@
+import { SanityImageSource } from "@sanity/image-url/lib/types/types";
+
 import Container from '@/components/container';
 import Link from 'next/link';
 import Image from 'next/image';
 import { urlForImage } from '@/lib/sanity/image';
 
-export default function Navbar(props) {
+interface NavbarProps {
+    logo: SanityImageSource;
+    className?: string;
+}
+
+export default function Navbar(props: NavbarProps) {
     return (
-        <div className="bg-white">
+        <div className={`bg-white ${props.className}`}>
             <div className="container mx-auto">
                 <nav className="flex flex-wrap justify-between py-4 gap-8">
                     <Link className="w-28 dark:hidden" href="/">

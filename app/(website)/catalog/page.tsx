@@ -7,16 +7,19 @@ interface Door {
   imageSrc: string;
 }
 
-export default async function Catalog() {
+export default function Catalog() {
   const doors = getDoors();
-  return <div className="grid grid-rows-3 grid-flow-col gap-2">
-    <div className="bg-gray-500 row-span-3 rounded-lg justify-center">фильтры, бля</div>
-    <div className="bg-red-300 row-span-3 col-span-5 rounded-lg">
-    <div className="flex justify-center gap-12 p-12">
-                {doors.map((door) => <DoorThumbnail price={door.price} title={door.title} imageSrc={door.imageSrc}/>)}
-            </div>
+  return (
+    // TODO: get back to height
+    <div className="flex gap-2 grow-0 h-[calc(100vh-241px)]">
+      <div className="basis-1/5 bg-gray-500 rounded-lg">фильтры, бля</div>
+      <div className="basis-4/5 bg-red-300 rounded-lg overflow-auto">
+        <div className="flex justify-center gap-12 p-12 flex-wrap">
+          {doors.map((door) => <DoorThumbnail price={door.price} title={door.title} imageSrc={door.imageSrc}/>)}
+        </div>
+      </div>
     </div>
-  </div>;
+  );
 }
 
 function getDoors(): Door[] {
