@@ -11,12 +11,12 @@ export default function Catalog() {
   const doors = getDoors();
   return (
     // TODO: get back to height
-    <div className="flex gap-2 grow-0 h-[calc(100vh-241px)]">
-      <div className="basis-1/5 bg-gray-500 rounded-lg">фильтры, бля</div>
-      <div className="basis-4/5 bg-red-300 rounded-lg overflow-auto">
-        <div className="flex justify-center gap-12 p-12 flex-wrap">
+    <div className="flex gap-2 grow-0 h-[calc(100vh-241px)] mx-2">
+      <div className="basis-1/5 bg-gray-500 rounded-lg">фильтры/категории</div>
+      <div className="basis-4/5 bg-red-300 rounded-lg overflow-auto flex gap-12 p-12 flex-wrap place-items-center">
+        
           {doors.map((door) => <DoorThumbnail price={door.price} title={door.title} imageSrc={door.imageSrc}/>)}
-        </div>
+        
       </div>
     </div>
   );
