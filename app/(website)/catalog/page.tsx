@@ -12,9 +12,15 @@ export default function Catalog() {
   const doors = getDoors();
   return (
     // TODO: get back to height
-    <div className="flex gap-2 grow-0 h-[calc(100vh-255px)] mx-2">
-      <div className="basis-1/6 bg-gray-300 rounded-lg">фильтры/категории</div>
-      <div className="basis-5/6 bg-slate-300 rounded-lg overflow-auto flex gap-12 p-12 flex-wrap place-items-center">
+    <div className="flex gap-2 grow-0 mx-2 w-2/3">
+      <div className=" h-max bg-gray-300 rounded-lg">
+        <div className='bg-teal-100 rounded-lg m-2 py-1 px-2'>категории</div>
+        <div className='bg-teal-100 rounded-lg m-2 py-1 px-2'>фильтры</div>
+        <div className='bg-teal-100 rounded-lg m-2 py-1 px-2'>еще фильтры</div>
+        <div className='bg-teal-100 rounded-lg m-2 py-1 px-2'>что-то еще</div>
+        <div className='bg-teal-100 rounded-lg m-2 py-1 px-2'>тоже фильтры</div>
+        </div>
+      <div className=" bg-slate-300 rounded-lg overflow-auto flex gap-12 p-12 flex-wrap place-items-center">
         
           {doors.map((door) => <DoorThumbnail price={door.price} title={door.title} imageSrc={door.imageSrc} category={door.category}/>)}
         
