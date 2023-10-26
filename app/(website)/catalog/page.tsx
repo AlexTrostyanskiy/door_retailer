@@ -19,10 +19,10 @@ export default function Catalog() {
         <div className='bg-teal-100 rounded-lg m-2 py-1 px-2'>что-то еще</div>
         <div className='bg-teal-100 rounded-lg m-2 py-1 px-2'>тоже фильтры</div>
         </div>
-      <div className=" bg-slate-300 rounded-lg overflow-auto flex gap-12 p-12 flex-wrap place-items-center basis-3/4">
-        
+      <div className=" bg-slate-300 rounded-lg overflow-auto flex gap-12 p-12 flex-wrap justify-evenly place-items-center basis-3/4">
+
           {doors.map((door) => <DoorThumbnail price={door.price} title={door.title} imageSrc={door.imageSrc} category={door.category}/>)}
-        
+
       </div>
     </div>
   );

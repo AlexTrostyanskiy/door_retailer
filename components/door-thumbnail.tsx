@@ -15,7 +15,7 @@ export function DoorThumbnail(props: DoorThumbnailProps) {
         <h2 className="text-right mb-2 font-semibold">{props.title}</h2>
         <h5 className="text-right text-inherit text-xs">{props.category}</h5>
         <h5 className="text-right mt-2">{props.price} р.</h5>
-        <Button className="mt-auto">Перейтиnpm</Button>
+        <Button className="mt-auto">Перейти</Button>
       </div>
     </div>
   );

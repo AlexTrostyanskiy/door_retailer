@@ -50,7 +50,7 @@ export default async function Layout({ children, params }) {
   const settings = await getSettings();
   return (
     <div className="flex flex-col max-h-screen">
-      <Navbar className="grow-0 " {...settings} />
+      <Navbar className="grow-0" {...settings} />
 
       {children}
 
