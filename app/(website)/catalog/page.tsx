@@ -8,6 +8,11 @@ interface Door {
   category: string;
 }
 
+
+
+
+
+
 export default function Catalog() {
   const doors = getDoors();
   return (
