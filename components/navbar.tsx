@@ -36,6 +36,9 @@ export default function Navbar(props: NavbarProps) {
                         <Link className="flex items-center text-sm font-medium text-gray-600 transition-all hover:text-amber-500 dark:text-gray-400" href="/post\[slug]">
                             Пост, мать его ети
                         </Link>
+                        <Link className="flex items-center text-sm font-medium text-gray-600 transition-all hover:text-amber-500 dark:text-gray-400" href="/archive">
+                            Архив
+                        </Link>
                     </div>
 
 
