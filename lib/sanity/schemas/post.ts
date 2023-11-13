@@ -6,7 +6,12 @@ export default {
     {
       name: "title",
       title: "Название",
-      type: "string"
+      type: "string",
+    },
+    {
+      name: "description",
+      title: "Описание",
+      type: "text",
     },
     {
       name: "slug",
@@ -16,6 +21,12 @@ export default {
         source: "title",
         maxLength: 96
       }
+    },
+    {
+      name: "producer",
+      title: "Производитель",
+      type: "reference",
+      to: [{ type: "producer" }]
     },
     {
       name: "image",

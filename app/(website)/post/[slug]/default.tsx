@@ -9,7 +9,28 @@ import { parseISO, format } from "date-fns";
 import CategoryLabel from "@/components/blog/category";
 import AuthorCard from "@/components/blog/authorCard";
 
-export default function Post(props) {
+
+interface Post {
+  title: string;
+  slug: string;
+  description: string;
+  producer: {
+    name: string;
+    slug: {
+      current: string;
+    };
+    logo: any;
+  },
+  categories: [
+    {
+      title: string;
+      slug: string;
+    }
+  ],
+  mainImage: any;
+}
+
+export default function Post(props: { post: Post; loading: boolean }) {
   const { loading, post } = props;
 
   const slug = post?.slug;
@@ -22,8 +43,8 @@ export default function Post(props) {
     ? urlForImage(post?.mainImage)
     : null;
 
-  const AuthorimageProps = post?.author?.image
-    ? urlForImage(post.author.image)
+  const AuthorimageProps = post?.producer?.logo
+    ? urlForImage(post.producer.logo)
     : null;
 
   return (
@@ -42,10 +63,10 @@ export default function Post(props) {
             <div className="flex items-center gap-3">
               <div className="relative h-10 w-10 flex-shrink-0">
                 {AuthorimageProps && (
-                  <Link href={`/author/${post.author.slug.current}`}>
+                  <Link href={`/author/${post.producer.slug.current}`}>
                     <Image
                       src={AuthorimageProps.src}
-                      alt={post?.author?.name}
+                      alt={post?.producer?.name}
                       className="rounded-full object-cover"
                       fill
                       sizes="40px"
@@ -55,20 +76,12 @@ export default function Post(props) {
               </div>
               <div>
                 <p className="text-gray-800 dark:text-gray-400">
-                  <Link href={`/author/${post.author.slug.current}`}>
-                    {post.author.name}
+                  <Link href={`/author/${post.producer.slug.current}`}>
+                    {post.producer.name}
                   </Link>
                 </p>
                 <div className="flex items-center space-x-2 text-sm">
-                  <time
-                    className="text-gray-500 dark:text-gray-400"
-                    dateTime={post?.publishedAt || post._createdAt}>
-                    {format(
-                      parseISO(post?.publishedAt || post._createdAt),
-                      "MMMM dd, yyyy"
-                    )}
-                  </time>
-                  <span>· {post.estReadingTime || "5"} min read</span>
+
                 </div>
               </div>
             </div>
@@ -92,7 +105,7 @@ export default function Post(props) {
       <Container>
         <article className="mx-auto max-w-screen-md ">
           <div className="prose mx-auto my-3 dark:prose-invert prose-a:text-blue-600">
-            {post.body && <PortableText value={post.body} />}
+            <PortableText value={post.description} />
           </div>
           <div className="mb-7 mt-7 flex justify-center">
             <Link
@@ -101,24 +114,8 @@ export default function Post(props) {
               ← View all posts
             </Link>
           </div>
-          {post.author && <AuthorCard author={post.author} />}
         </article>
       </Container>
     </>
   );
 }
-
-const MainImage = ({ image }) => {
-  return (
-    <div className="mb-12 mt-12 ">
-      <Image {...urlForImage(image)} alt={image.alt || "Thumbnail"} />
-      <figcaption className="text-center ">
-        {image.caption && (
-          <span className="text-sm italic text-gray-600 dark:text-gray-400">
-            {image.caption}
-          </span>
-        )}
-      </figcaption>
-    </div>
-  );
-};
