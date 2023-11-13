@@ -33,12 +33,7 @@ export default function Navbar(props: NavbarProps) {
                         <Link className="flex items-center text-sm font-medium text-gray-600 transition-all hover:text-amber-500 dark:text-gray-400" href="/about">
                             О нас
                         </Link>
-                        <Link className="flex items-center text-sm font-medium text-gray-600 transition-all hover:text-amber-500 dark:text-gray-400" href="/post/dver">
-                            Пост, мать его ети
-                        </Link>
-                        <Link className="flex items-center text-sm font-medium text-gray-600 transition-all hover:text-amber-500 dark:text-gray-400" href="/archive">
-                            Архив
-                        </Link>
+
                     </div>
 
 
