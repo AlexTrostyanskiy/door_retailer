@@ -4,31 +4,9 @@ import Container from "@/components/container";
 import { notFound } from "next/navigation";
 import { PortableText } from "@/lib/sanity/plugins/portabletext";
 import { urlForImage } from "@/lib/sanity/image";
-import { parseISO, format } from "date-fns";
 
 import CategoryLabel from "@/components/blog/category";
-import AuthorCard from "@/components/blog/authorCard";
 
-
-interface Post {
-  title: string;
-  slug: string;
-  description: string;
-  producer: {
-    name: string;
-    slug: {
-      current: string;
-    };
-    logo: any;
-  },
-  categories: [
-    {
-      title: string;
-      slug: string;
-    }
-  ],
-  mainImage: any;
-}
 
 export default function Post(props: { post: Post; loading: boolean }) {
   const { loading, post } = props;

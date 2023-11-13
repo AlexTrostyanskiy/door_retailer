@@ -23,6 +23,11 @@ export default {
       }
     },
     {
+      name: "price",
+      title: "Цена",
+      type: "number",
+    },
+    {
       name: "producer",
       title: "Производитель",
       type: "reference",
@@ -37,10 +42,10 @@ export default {
       }
     },
     {
-      name: "categories",
-      title: "Categories",
+      name: "category",
+      title: "Категория",
       type: "reference",
-      to: { 
+      to: {
         type: "category"
       }
     },
