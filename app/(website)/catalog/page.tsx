@@ -1,9 +1,8 @@
 import { DoorThumbnail } from '../../../components/door-thumbnail';
 import { Product } from "@/lib/sanity/type";
-import { getAllProducts } from '@/lib/sanity/client';
 
 
-export default async function Catalog(props: { doors: Product[] }) {
+export default async function Catalog(props: { posts; doors: Product[] }) {
 
   return (
     <div className="flex gap-2 grow-0 mx-2">
@@ -17,7 +16,7 @@ export default async function Catalog(props: { doors: Product[] }) {
       </div>
 
       <div className=" bg-slate-300 rounded-lg overflow-auto flex gap-12 p-12 flex-wrap justify-evenly place-items-center basis-3/4">
-        {props.doors?.map((door) => <DoorThumbnail price={door.price} title={door.title} imageSrc={door.imageSrc} category={door.category}/>)}
+        {props.doors.map((door) => <DoorThumbnail price={door.price} title={door.title} imageSrc={door.imageSrc} category={door.category}/>)}
       </div>
       
     </div>
