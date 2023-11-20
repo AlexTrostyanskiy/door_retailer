@@ -3,7 +3,7 @@ import { Product } from "@/lib/sanity/type";
 
 export function Catalog(props: { doors: Product[] }) {
     return (
-        <div className="flex gap-2 grow-0 mx-2">
+        <div className="flex gap-2 grow-0 mx-2 max-h-screen">
 
             <div className="h-max bg-gray-300 rounded-lg basis-1/4">
                 <div className='bg-teal-100 rounded-lg m-2 py-1 px-2'>категории</div>
